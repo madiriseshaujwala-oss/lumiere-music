@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUMIÈRE | Music Streaming</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <h2 class="logo">LUMIÈRE<span> ♪</span></h2>
+    <p class="menu-title">MENU</p>
+    <a class="active" href="#">⌂ &nbsp; Home</a>
+    <a href="#discover">◉ &nbsp; Discover</a>
+    <a href="#library">♫ &nbsp; My Library</a>
+
+    <p class="menu-title">YOUR MOOD</p>
+    <a href="#discover">♡ &nbsp; Romantic</a>
+    <a href="#discover">☀ &nbsp; Happy</a>
+    <a href="#discover">☾ &nbsp; Relax</a>
+
+    <div class="sidebar-bottom">
+      <p>Music is life.</p>
+      <small>Listen. Feel. Repeat.</small>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header>
+      <div>
+        <p class="greeting">YOUR PERSONAL MUSIC SPACE</p>
+        <h1>Feel every <span>beat.</span></h1>
+      </div>
+      <input id="search" type="text" placeholder="⌕  Search songs...">
+    </header>
+
+    <section class="hero">
+      <div>
+        <p class="tag">YOUR DAILY SOUNDTRACK</p>
+        <h2>Find your<br>own rhythm.</h2>
+        <p>Discover music that matches your mood.</p>
+        <button onclick="playSong(0)">▶ &nbsp; Play music</button>
+      </div>
+      <div class="hero-art">♫</div>
+    </section>
+
+    <section id="discover">
+      <div class="section-heading">
+        <h2>Discover music</h2>
+        <span>Made for your moments</span>
+      </div>
+
+      <div class="filters">
+        <button class="filter active" data-category="All">All</button>
+        <button class="filter" data-category="Pop">Pop</button>
+        <button class="filter" data-category="Chill">Chill</button>
+        <button class="filter" data-category="Romantic">Romantic</button>
+      </div>
+
+      <div class="songs" id="songList"></div>
+    </section>
+
+    <section id="library" class="library">
+      <h2>Your music, your world.</h2>
+      <p>Choose a song and enjoy your favourite moments.</p>
+    </section>
+  </main>
+
+  <footer class="player">
+    <div class="now-playing">
+      <div class="mini-art" id="miniArt">♫</div>
+      <div>
+        <strong id="songTitle">Choose a song</strong>
+        <small id="artist">LUMIÈRE Playlist</small>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="previous">⏮</button>
+      <button class="play-button" id="togglePlay">▶</button>
+      <button id="next">⏭</button>
+      <div class="progress-area">
+        <span id="currentTime">0:00</span>
+        <input type="range" id="progress" value="0" min="0" max="100">
+        <span id="duration">0:00</span>
+      </div>
+    </div>
+    <span class="volume">♫ &nbsp; LUMIÈRE</span>
+  </footer>
+
+  <audio id="audio"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
